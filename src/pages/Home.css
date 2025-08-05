@@ -2,6 +2,9 @@
   padding: 2rem;
   font-family: Arial, sans-serif;
   text-align: center;
+  background-color: #f5f0e6; /* kerman valkoinen tausta */
+  color: #333333; /* tummempi teksti paremman kontrastin vuoksi */
+  min-height: 100vh;
 }
 
 .products-grid {
@@ -13,17 +16,19 @@
 }
 
 .product-card {
-  border: 1px solid #ddd;
+  border: 1px solid #800000; /* tummempi punainen reuna */
   border-radius: 8px;
   padding: 1rem;
   width: 200px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   transition: transform 0.2s ease;
-  background-color: #fff;
+  background-color: #a80000; /* tummempi punainen tausta kortille */
+  color: white; /* valkoinen teksti */
 }
 
 .product-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .product-card img {
@@ -37,19 +42,21 @@
 
 .product-card p {
   font-weight: bold;
-  color: #333;
+  color: white; /* valkoinen hinta */
 }
 
 .product-card button {
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
   border: none;
-  background-color: #2196F3;
-  color: white;
+  background-color: white; /* valkoinen nappi */
+  color: #c40000; /* punainen teksti napissa */
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
 }
 
 .product-card button:hover {
-  background-color: #1976D2;
+  background-color: #f5f5f5;
 }

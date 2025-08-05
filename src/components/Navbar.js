@@ -5,6 +5,8 @@ import {
   FaBoxOpen,
   FaInfoCircle,
   FaPhone,
+  FaTshirt,
+  FaSearch
 } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
@@ -13,13 +15,37 @@ import "./Navbar.css";
 export default function Navbar() {
   const { cart } = useContext(CartContext);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    console.log("Haetaan:", searchTerm);
+    setSearchTerm("");
+    setMenuOpen(false);
+  };
 
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/">Mun Kauppa</Link>
+        <Link to="/">
+          Vaatekauppa.fi <FaTshirt className="shirt-icon" />
+        </Link>
+
+        {/* Hakukenttä tässä logon jälkeen */}
+        <form className="navbar-search" onSubmit={handleSearchSubmit}>
+          <input
+            type="text"
+            placeholder="Hae tuotteita..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            aria-label="Hae tuotteita"
+          />
+          <button type="submit" aria-label="Hae">
+            <FaSearch />
+          </button>
+        </form>
       </div>
 
       <button
@@ -55,22 +81,20 @@ export default function Navbar() {
             Yhteystiedot
           </NavLink>
         </li>
+
         <li>
           <Link to="/cart" className="cart-link" onClick={() => setMenuOpen(false)}>
-  <span className="cart-icon-wrapper">
-    <FaShoppingCart size={24} />
-    {cart.length > 0 && (
-      <span className="cart-count">{cart.length}</span>
-    )}
-  </span>
-  <span className="cart-price">{totalPrice.toFixed(2)} €</span>
-</Link>
-
+            <span className="cart-text">Ostoskori</span>
+            <span className="cart-icon-wrapper">
+              <FaShoppingCart size={24} />
+              {cart.length > 0 && (
+                <span className="cart-count">{cart.length}</span>
+              )}
+            </span>
+            <span className="cart-price">{totalPrice.toFixed(2)} €</span>
+          </Link>
         </li>
       </ul>
     </nav>
   );
 }
-
-
-

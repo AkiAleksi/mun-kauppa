@@ -8,8 +8,7 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <h1>Tervetuloa mun kauppaan</h1>
-      <h2>Tuotteet</h2>
+      <h1>Tuotteet</h1>
       <div className="products-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card">

@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext"; // ← tuonti
 
 export default function Checkout() {
+  const { clearCart } = useContext(CartContext); // ← käyttö
   const [formData, setFormData] = useState({
     email: "",
     address: ""
@@ -24,6 +26,7 @@ export default function Checkout() {
       return;
     }
 
+    clearCart(); // ← tyhjennä ostoskori tilauksen jälkeen
     setSubmitted(true);
   };
 
