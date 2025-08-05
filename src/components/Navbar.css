@@ -1,0 +1,129 @@
+.navbar {
+  background-color: #b22222;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar-logo {
+  margin-right: auto;
+  text-align: left;
+}
+
+.navbar-logo a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: color 0.3s, background-color 0.3s;
+  user-select: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links li a i,
+.navbar-links li a .icon {
+  margin-right: 8px;
+  vertical-align: middle;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #b22222;
+  background-color: white;
+  cursor: pointer;
+}
+
+.navbar-links li a:hover i,
+.navbar-links li a:hover .icon {
+  color: #b22222;
+}
+
+/* 🛒 OSTOSKORI */
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  user-select: none;
+  transition: color 0.3s, background-color 0.3s;
+  white-space: nowrap;
+}
+
+/* UUSI: wrapper ikonille + countille */
+.cart-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Lukumäärä ikonin päällä */
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -14px;
+  background: white;
+  color: #b22222;
+  border: 2px solid #b22222;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 13px; /* hieman suurempi fontti */
+  font-weight: bold;
+  line-height: 20px;
+  height: 20px;
+  min-width: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.cart-price {
+  font-size: 1rem;
+}
+
+.cart-link i {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  color: white;
+  transition: color 0.3s;
+  margin-right: 0;
+}
+
+.cart-link:hover {
+  color: #b22222;
+  background-color: white;
+  cursor: pointer;
+}
+
+.cart-link:hover i {
+  color: #b22222;
+}
