@@ -1,0 +1,14 @@
+.site-footer {
+  background-color: #b30000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  font-size: 3rem;
+}
+
+.site-footer p {
+  font-size: 1.5rem !important;
+}

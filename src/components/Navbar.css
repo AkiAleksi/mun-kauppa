@@ -183,3 +183,11 @@
 .cart-link:hover i {
   color: #b22222;
 }
+
+.navbar-slogan {
+  margin-left: 2rem;
+  font-size: 3rem;
+  font-style: italic;
+  color: white;
+  white-space: nowrap;
+}

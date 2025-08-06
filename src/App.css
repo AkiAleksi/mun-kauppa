@@ -1,3 +1,24 @@
+/* Nämä tyylit mahdollistavat footerin kiinnityksen alareunaan */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Kääri App-komponentti diviin, jossa on tämä luokka */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Sisältö vie tilaa ja footer pysyy alhaalla */
+.main-content {
+  flex: 1;
+}
+
+/* Säilytä muut tyylit alla */
+
 .App {
   text-align: center;
 }
@@ -36,3 +57,5 @@
     transform: rotate(360deg);
   }
 }
+
+

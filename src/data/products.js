@@ -1,4 +1,3 @@
-// src/data/products.js
 const products = [
   {
     id: 1,
@@ -35,7 +34,26 @@ const products = [
     name: "Huivi",
     price: 19.90,
     image: "https://picsum.photos/150/150?random=6"
+  },
+  {
+    id: 7,
+    name: "Collegepaita",
+    price: 39.90,
+    image: "https://picsum.photos/150/150?random=7"
+  },
+  {
+    id: 8,
+    name: "Shortsit",
+    price: 29.90,
+    image: "https://picsum.photos/150/150?random=8"
+  },
+  {
+    id: 9,
+    name: "Pipo",
+    price: 12.90,
+    image: "https://picsum.photos/150/150?random=9"
   }
 ];
 
 export default products;
+

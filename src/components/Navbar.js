@@ -1,12 +1,11 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import {
   FaShoppingCart,
   FaHome,
   FaBoxOpen,
   FaInfoCircle,
   FaPhone,
-  FaTshirt,
-  FaSearch
+  FaTshirt
 } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
@@ -15,16 +14,9 @@ import "./Navbar.css";
 export default function Navbar() {
   const { cart } = useContext(CartContext);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
-
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    console.log("Haetaan:", searchTerm);
-    setSearchTerm("");
-    setMenuOpen(false);
-  };
 
   return (
     <nav className="navbar">
@@ -32,20 +24,9 @@ export default function Navbar() {
         <Link to="/">
           Vaatekauppa.fi <FaTshirt className="shirt-icon" />
         </Link>
-
-        {/* Hakukenttä tässä logon jälkeen */}
-        <form className="navbar-search" onSubmit={handleSearchSubmit}>
-          <input
-            type="text"
-            placeholder="Hae tuotteita..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            aria-label="Hae tuotteita"
-          />
-          <button type="submit" aria-label="Hae">
-            <FaSearch />
-          </button>
-        </form>
+        <span className="navbar-slogan">
+          Tyyllikkäitä vaatteita
+        </span>
       </div>
 
       <button
@@ -53,7 +34,7 @@ export default function Navbar() {
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
       >
-        &#9776;
+        ☰
       </button>
 
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
@@ -81,7 +62,6 @@ export default function Navbar() {
             Yhteystiedot
           </NavLink>
         </li>
-
         <li>
           <Link to="/cart" className="cart-link" onClick={() => setMenuOpen(false)}>
             <span className="cart-text">Ostoskori</span>
@@ -91,7 +71,7 @@ export default function Navbar() {
                 <span className="cart-count">{cart.length}</span>
               )}
             </span>
-            <span className="cart-price">{totalPrice.toFixed(2)} €</span>
+            <span className="cart-price">{totalPrice.toFixed(2)}€</span>
           </Link>
         </li>
       </ul>
