@@ -8,6 +8,7 @@ export default function Home() {
 
   return (
     <div className="home-container">
+
       <h1>Tuotteet</h1>
       <div className="products-grid">
         {products.map((product) => (
@@ -24,5 +25,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 

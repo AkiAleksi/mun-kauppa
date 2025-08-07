@@ -13,9 +13,9 @@
   margin-left: 3cm;
   margin-right: auto;
   text-align: left;
-  display: flex;              /* Lisätty, jotta logo ja haku ovat samassa rivissä */
-  align-items: center;        /* Keskittää pystysuunnassa */
-  gap: 1rem;                  /* Tilaa logon ja hakukentän väliin */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .navbar-logo a {
@@ -27,36 +27,35 @@
   align-items: center;
 }
 
-.navbar-logo .shirt-icon {
+.navbar-logo .lightbulb-icon {
   margin-left: 10px;
-  font-size: 5rem; /* suurempi koko */
+  font-size: 5rem;
   color: white;
-  vertical-align: middle; /* korjaa korkeuden */
+  vertical-align: middle;
   position: relative;
-  top: 1px; /* hienosäätöä: nosta tai laske */
+  top: 1px;
 }
 
 .navbar-search {
   display: flex;
   align-items: center;
-  margin-left: 2.7cm;  /* Siirtää hakukentän 4cm oikealle */
+  margin-left: 2.7cm;
 }
 
 .navbar-search input {
-  padding: 0.5rem 0.75rem;  /* Isompi padding */
+  padding: 0.5rem 0.75rem;
   border-radius: 4px 0 0 4px;
   border: none;
-  font-size: 1.3rem;  /* Suurempi fonttikoko */
+  font-size: 1.3rem;
   outline: none;
   height: 37px;
-  width: 350px;  /* Isompi leveys */
+  width: 350px;
   transition: box-shadow 0.3s;
 }
 
 .navbar-search input:focus {
   box-shadow: 0 0 5px white;
 }
-
 
 .navbar-search button {
   background-color: #b22222;
@@ -77,7 +76,6 @@
   color: #b22222;
 }
 
-/* Korjattu fonttikoko (pilkku -> piste) */
 .navbar-links {
   display: flex;
   list-style: none;
@@ -90,7 +88,7 @@
   color: white;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.5rem; /* kasvatettu fonttikoko */
+  font-size: 1.5rem;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   transition: color 0.3s, background-color 0.3s;
@@ -167,7 +165,7 @@
 }
 
 .cart-link i {
-  font-size: 1,2rem;
+  font-size: 1.2rem;
   vertical-align: middle;
   color: white;
   transition: color 0.3s;

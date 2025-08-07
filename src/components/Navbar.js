@@ -5,7 +5,7 @@ import {
   FaBoxOpen,
   FaInfoCircle,
   FaPhone,
-  FaTshirt
+  FaLightbulb
 } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
@@ -22,10 +22,10 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/">
-          Vaatekauppa.fi <FaTshirt className="shirt-icon" />
+          Ledikauppa.fi <FaLightbulb className="lightbulb-icon" />
         </Link>
         <span className="navbar-slogan">
-          Tyyllikkäitä vaatteita
+          edullisia LED-tuotteita
         </span>
       </div>
 
