@@ -1,7 +1,7 @@
-# Kauppa.net – React-verkkokauppa
+# Ledikauppa.fi – React-verkkokauppa
 
 ## Yleiskuvaus
-Kauppa.net on **React.js**:llä rakennettu responsiivinen verkkokauppa.  
+Ledikauppa.fi on **React.js**:llä rakennettu responsiivinen verkkokauppa.  
 Alusta mahdollistaa tuotteiden selaamisen, tuotesivujen katselun, tuotteiden lisäämisen ostoskoriin ja yksinkertaisen kassaprosessin simuloinnin.  
 Projekti toimii portfoliona nykyaikaisesta front-end verkkokauppasovelluksesta.
 
