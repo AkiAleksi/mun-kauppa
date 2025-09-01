@@ -24,7 +24,7 @@ Projekti toimii portfoliona nykyaikaisesta front-end verkkokauppasovelluksesta.
 ## Asennus
 1. Kopioi repository:  
 ```bash
-git clone https://github.com/kayttajanimi/kauppa-net.git
+git clone https://github.com/AkiAleksi/mun-kauppa.git
 
 2. Siirry projektikansioon
 
